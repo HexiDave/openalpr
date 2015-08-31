@@ -36,8 +36,8 @@ namespace alpr
 
     //this->descriptorMatcher = DescriptorMatcher::create( "FlannBased" );
 
-    this->detector = new FastFeatureDetector(10, true);
-    this->extractor = new BRISK(10, 1, 0.9);
+	this->detector = FastFeatureDetector::create();
+	this->extractor = BRISK::create(10, 1, 0.9);
   }
 
   FeatureMatcher::~FeatureMatcher()
